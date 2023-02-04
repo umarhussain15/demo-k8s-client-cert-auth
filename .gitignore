@@ -1,0 +1,7 @@
+*.key
+*kubeconfig
+*.csr
+*.cnf
+*-csr.yaml
+
+.vscode/
