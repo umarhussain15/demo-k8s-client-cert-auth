@@ -13,5 +13,5 @@ contexts:
 - context:
     cluster: ${CLUSTER_NAME}
     user: ${USER}
-  name: ${USER}-${CLUSTER_NAME}
-current-context: ${USER}-${CLUSTER_NAME}
+  name: ${USER}@${CLUSTER_NAME}
+current-context: ${USER}@${CLUSTER_NAME}

@@ -12,9 +12,11 @@ export USER=$1
 USER_CSR_FILE=$USER.csr
 USER_CSR_YAML=$USER-csr.yaml
 
-export USER_CSR_NAME=$USER-csr
+openssl req -text -noout -verify -in $USER_CSR_FILE
+
 export BASE64_CSR=$(cat $USER_CSR_FILE | base64 | tr -d '\n')
 
+export USER_CSR_NAME=$USER-csr
 cat csr.yaml | envsubst > $USER_CSR_YAML
 
 kubectl apply -f $USER_CSR_YAML
